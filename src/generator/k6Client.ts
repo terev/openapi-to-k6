@@ -63,8 +63,8 @@ function _getResponseDataType(response: GetterResponse): string {
 function _generateResponseTypeDefinition(response: GetterResponse): string {
   return `{
     response: Response
-    operationId: string
     ${_isVoidResponse(response) ? '' : `data: ${_getResponseDataType(response)}`}
+    operationId: string
 }`
 }
 
@@ -272,8 +272,8 @@ const generateK6Implementation = (
         
       return {
         response,
-        operationId: '${jsStringEscape(operationId)}',
         ${_isVoidResponse(response) ? '' : 'data,'}
+        operationId: '${jsStringEscape(operationId)}',
       }
     }
   `
