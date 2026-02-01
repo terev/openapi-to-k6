@@ -65,7 +65,7 @@ export class ExampleAPIClient {
   ): {
     response: Response
     data: GetExampleData200
-    operationId: string
+    operationId: 'getExampleData'
   } {
     const k6url = new URL(
       this.cleanBaseUrl +
@@ -89,7 +89,6 @@ export class ExampleAPIClient {
     return {
       response,
       data,
-      operationId: 'getExampleData',
     }
   }
 

@@ -52,7 +52,7 @@ export class FormURLEncodedAPIClient {
   ): {
     response: Response
     data: PostSubmitForm200
-    operationId: string
+    operationId: 'PostSubmitForm'
   } {
     const k6url = new URL(this.cleanBaseUrl + `/submit-form`)
     const mergedRequestParameters = this._mergeRequestParameters(
@@ -81,7 +81,6 @@ export class FormURLEncodedAPIClient {
     return {
       response,
       data,
-      operationId: 'PostSubmitForm',
     }
   }
 

@@ -42,7 +42,7 @@ export class DefaultClient {
   ): {
     response: Response
     data: GetExampleGet200
-    operationId: string
+    operationId: 'GetExampleGet'
   } {
     const k6url = new URL(this.cleanBaseUrl + `/example-get`)
     const mergedRequestParameters = this._mergeRequestParameters(
@@ -72,7 +72,6 @@ export class DefaultClient {
     return {
       response,
       data,
-      operationId: 'GetExampleGet',
     }
   }
   /**
@@ -86,7 +85,7 @@ export class DefaultClient {
   ): {
     response: Response
     data: void
-    operationId: string
+    operationId: 'PostExamplePost'
   } {
     const k6url = new URL(this.cleanBaseUrl + `/example-post`)
     const mergedRequestParameters = this._mergeRequestParameters(
@@ -122,7 +121,6 @@ export class DefaultClient {
     return {
       response,
       data,
-      operationId: 'PostExamplePost',
     }
   }
   /**
@@ -132,7 +130,7 @@ export class DefaultClient {
   getExampleResponseHeaders(requestParameters?: Params): {
     response: Response
     data: GetExampleResponseHeaders200
-    operationId: string
+    operationId: 'GetExampleResponseHeaders'
   } {
     const k6url = new URL(this.cleanBaseUrl + `/example-response-headers`)
     const mergedRequestParameters = this._mergeRequestParameters(
@@ -155,7 +153,6 @@ export class DefaultClient {
     return {
       response,
       data,
-      operationId: 'GetExampleResponseHeaders',
     }
   }
 

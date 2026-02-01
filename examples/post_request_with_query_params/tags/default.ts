@@ -41,7 +41,7 @@ export class DefaultClient {
   ): {
     response: Response
     data: CreateExampleData201
-    operationId: string
+    operationId: 'createExampleData'
   } {
     const k6url = new URL(
       this.cleanBaseUrl +
@@ -74,7 +74,6 @@ export class DefaultClient {
     return {
       response,
       data,
-      operationId: 'createExampleData',
     }
   }
 

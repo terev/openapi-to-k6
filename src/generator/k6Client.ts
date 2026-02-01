@@ -33,7 +33,10 @@ function _setDefaultSchemaTitle(context: ContextSpecs) {
   }
 }
 
-function _generateResponseTypeDefinition(response: GetterResponse): string {
+function _generateResponseTypeDefinition(
+  response: GetterResponse,
+  operationId: string
+): string {
   let responseDataType = ''
 
   if (
@@ -48,7 +51,7 @@ function _generateResponseTypeDefinition(response: GetterResponse): string {
   return `{
     response: Response
     data: ${responseDataType}
-    operationId: string
+    operationId: '${jsStringEscape(operationId)}'
 }`
 }
 
@@ -238,7 +241,7 @@ const generateK6Implementation = (
 
   const options = _getK6RequestOptions(verbOptions)
 
-  return `${operationName}(\n    ${toObjectString(props, 'implementation')} requestParameters?: Params): ${_generateResponseTypeDefinition(response)} {\n${bodyForm}
+  return `${operationName}(\n    ${toObjectString(props, 'implementation')} requestParameters?: Params): ${_generateResponseTypeDefinition(response, operationId)} {\n${bodyForm}
         ${urlGeneration}
         const mergedRequestParameters = this._mergeRequestParameters(requestParameters || {}, this.commonRequestParameters);
         const response = http.request(${options});
@@ -252,7 +255,6 @@ const generateK6Implementation = (
       return {
         response,
         data,
-        operationId: '${jsStringEscape(operationId)}'
       }
     }
   `

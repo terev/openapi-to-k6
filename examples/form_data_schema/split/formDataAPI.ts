@@ -36,7 +36,7 @@ export class FormDataAPIClient {
   ): {
     response: Response
     data: PostUpload200
-    operationId: string
+    operationId: 'PostUpload'
   } {
     const formData = new FormData()
     formData.append('file', postUploadBody.file)
@@ -67,7 +67,6 @@ export class FormDataAPIClient {
     return {
       response,
       data,
-      operationId: 'PostUpload',
     }
   }
 

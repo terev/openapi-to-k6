@@ -64,7 +64,7 @@ export class FormURLEncodedAPIWithQueryParametersClient {
   ): {
     response: Response
     data: PostSubmitForm200
-    operationId: string
+    operationId: 'PostSubmitForm'
   } {
     const k6url = new URL(
       this.cleanBaseUrl +
@@ -97,7 +97,6 @@ export class FormURLEncodedAPIWithQueryParametersClient {
     return {
       response,
       data,
-      operationId: 'PostSubmitForm',
     }
   }
 

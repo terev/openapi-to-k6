@@ -39,7 +39,7 @@ export class ExampleAPIClient {
   ): {
     response: Response
     data: CreateExampleData201
-    operationId: string
+    operationId: 'createExampleData'
   } {
     const k6url = new URL(this.cleanBaseUrl + `/example`)
     const mergedRequestParameters = this._mergeRequestParameters(
@@ -68,7 +68,6 @@ export class ExampleAPIClient {
     return {
       response,
       data,
-      operationId: 'createExampleData',
     }
   }
 
