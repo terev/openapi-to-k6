@@ -67,6 +67,7 @@ export class FormDataAPIClient {
     return {
       response,
       data,
+      operationId: 'PostUpload' as const,
     }
   }
 

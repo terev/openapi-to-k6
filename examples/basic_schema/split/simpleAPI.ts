@@ -54,6 +54,7 @@ export class SimpleAPIClient {
     return {
       response,
       data,
+      operationId: 'GetExample' as const,
     }
   }
 

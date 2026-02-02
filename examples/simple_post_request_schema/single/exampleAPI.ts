@@ -104,6 +104,7 @@ export class ExampleAPIClient {
     return {
       response,
       data,
+      operationId: 'createExampleData' as const,
     }
   }
 

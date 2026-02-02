@@ -54,6 +54,7 @@ export class DefaultClient {
     return {
       response,
       data,
+      operationId: 'GetExample' as const,
     }
   }
 

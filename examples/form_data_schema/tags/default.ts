@@ -67,6 +67,7 @@ export class DefaultClient {
     return {
       response,
       data,
+      operationId: 'PostUpload' as const,
     }
   }
 

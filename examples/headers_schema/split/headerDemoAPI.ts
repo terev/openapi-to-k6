@@ -72,6 +72,7 @@ export class HeaderDemoAPIClient {
     return {
       response,
       data,
+      operationId: 'GetExampleGet' as const,
     }
   }
 
@@ -122,6 +123,7 @@ export class HeaderDemoAPIClient {
     return {
       response,
       data,
+      operationId: 'PostExamplePost' as const,
     }
   }
 
@@ -155,6 +157,7 @@ export class HeaderDemoAPIClient {
     return {
       response,
       data,
+      operationId: 'GetExampleResponseHeaders' as const,
     }
   }
 

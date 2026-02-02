@@ -73,6 +73,7 @@ export class FormURLEncodedAPIWithQueryParametersClient {
     return {
       response,
       data,
+      operationId: 'PostSubmitForm' as const,
     }
   }
 

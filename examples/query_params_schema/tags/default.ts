@@ -63,6 +63,7 @@ export class DefaultClient {
     return {
       response,
       data,
+      operationId: 'getExampleData' as const,
     }
   }
 

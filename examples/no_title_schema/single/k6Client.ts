@@ -56,6 +56,7 @@ export class K6ClientClient {
     return {
       response,
       data,
+      operationId: 'GetExample' as const,
     }
   }
 

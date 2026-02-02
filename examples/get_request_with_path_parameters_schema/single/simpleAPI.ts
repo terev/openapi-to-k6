@@ -63,6 +63,7 @@ export class SimpleAPIClient {
     return {
       response,
       data,
+      operationId: 'getItemById' as const,
     }
   }
 

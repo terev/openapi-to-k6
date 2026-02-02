@@ -255,6 +255,7 @@ const generateK6Implementation = (
       return {
         response,
         data,
+        operationId: '${jsStringEscape(operationId)}' as const,
       }
     }
   `

@@ -73,6 +73,7 @@ export class DefaultClient {
     return {
       response,
       data,
+      operationId: 'PostSubmitForm' as const,
     }
   }
 
